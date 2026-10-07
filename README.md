@@ -1,2 +1,2 @@
 # Proyecto-BlossomBoutique
-Este repositorio es diseñado para la asignatura de programación y diseño de aplicaciones.
+Este desarrollo web esta diseñado para ofrecer servicios de arreglos florales personalizados.
