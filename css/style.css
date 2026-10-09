@@ -1,26 +1,40 @@
+/*RESET*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*DESPLAZAMIENTO SUAVE DE HTML*/
 html {
     scroll-behavior:smooth;
 }
 
+/*CONFIGURACIONES GENERALES*/
 body {
     margin:0;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:'Fraunces', serif;
     color: #CC91CC;
     background-color:#F9FAC8;
     overflow-x: hidden;
 }
 
+.fraunces {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+
+/*CONTENEDOR PRINCIPAL*/
 .container { width: min(1100px, 
             calc(100% - 2rem)); 
             margin: 0 auto;
             }
 
+/*CONFIGURACIONES PARA EL HEADER - ENCABEZADO*/
 .sitio-header {
     position: sticky;
   top: 0;
@@ -30,6 +44,7 @@ body {
   border-bottom: 1px solid var(--line);
 }
 
+/*CONFIGURACIONES INTERNAS DEL ENCABEZADO - HEADER INNER*/
 .header-inner {
      display: flex;
   align-items: center;
@@ -41,9 +56,88 @@ body {
 .logo {
     display: flex;
   align-items: center;
-  gap: .6rem;
-  font-family: "Fraunces", serif;
+  gap: 0.6rem;
+  font-family: 'Fraunces', serif;
   font-weight: 700;
   font-size: 1.1rem;
   color: rgb(152, 105, 144);
+  text-decoration:none;
+}
+
+/*LISTAS*/
+ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+/*ENLACES*/
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/*MENÚ PRINCIPAL DE NAVEGACIONES*/
+.main-nav {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/*LISTA SEA HORIZONTAL*/
+.main-nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    font-weight: 600;
+    transition: color .2s ease;
+}
+
+.main-nav a:hover {
+    color: rgb(142, 69, 139)
+}
+
+.menu-toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgb(236, 233, 131);
+  background: #fff;
+  color: #cb75bf;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  max-height: 0;
+  overflow: hidden;
+  border-top: 1px solid rgb(236, 233, 131);
+  background: #fff;
+  transition: max-height .28s ease;
+}
+.mobile-nav.open {
+     max-height: 360px; 
+    }
+.mobile-nav ul { 
+    display: flex; 
+    flex-direction: column; 
+    gap: .3rem; 
+    padding: 1rem 1.25rem;
+ }
+.mobile-nav li a { 
+    display: block; 
+    padding: .7rem .5rem; 
+    border-radius: .6rem; 
+    font-weight: 600; }
+
+
+@media (min-width: 768px) {
+  .main-nav { 
+    display: flex; 
+}
+  .menu-toggle, .mobile-nav { display: none; }
 }
