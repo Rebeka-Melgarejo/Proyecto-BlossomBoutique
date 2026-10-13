@@ -14,10 +14,11 @@
   <meta name="author" content="Rebeka Melgarejo">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Font awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
+    <!--Archivo de estilos externo-->
   <link rel="stylesheet" href="css/style.css">
 <title>Blossom Boutique | Arreglos Florales</title>
 <!--El tag de title es para como quiero que se muestre en el navegador-->
@@ -36,6 +37,7 @@
 
         </a> 
 
+    <!--Navegación escritorio-->
     <nav class="main-nav">
         <ul>
             <li>
@@ -57,11 +59,13 @@
 
     </nav>  
 
-<button id="menu-toggle" class="menu-toggle" 
-aria-label="Abrir menú" aria-expanded="false" 
-aria-controls="mobile-menu">☰</button>
-</div>
+    <!--Boton Menú movil-->
+    <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
 
+<!--Navegación movil-->
 <nav id="mobile-menu" class="mobile-nav">
       <ul>
          <li>
@@ -85,34 +89,130 @@ aria-controls="mobile-menu">☰</button>
 
     </header>
 
+    <!--Inicio main (principal) de desarrollo web-->
+
     <main>
-        <!--SECCIÓN CARRUSEL-->
-    <section id="carrusel" class="carousel-section container">
-        <h2>Nuevas flores, nuevos momentos.</h2>
+        <!--SECCIÓN CARRUSEL INTERACTIVO DE 3 IMAGENES-->
+    <section id="inicio" class="hero-section">
         <div class="carousel-track" id="carouseltrackebc">
+
             <!--Primera imagen de hero-->
             <div class="carousel-slide">
                 <img src="img/hero1.jpeg" alt="imagen flores hero1">
+                <div class="slide-overlay">
+                     <span class="badge">Blossom Boutique</span>
+                    <h1>Flores <span class="highlight-yellow">que hablan por ti.</span></h1>
+                    <p>Detalles únicos que transforman momentos especiales en recuerdos inolvidables.</p>
+                    <a href="#servicios" class="btn-hero">Descubrir arreglos</a>
+                </div>
             </div>
+
             <!--Segunda  imagen de hero-->
             <div class="carousel-slide">
                 <img src="img/hero2.jpeg" alt="imagen flores hero2">
+                <div class="slide-overlay">
+                    <span class="badge">New Arrivals</span>
+                    <h1>Nuevas flores, <span class="highlight-yellow">nuevos momentos</span></h1>
+                    <p>Descubre nuestras nuevas colecciones florales, creadas para sorprender y enamorar.</p>
+                    <a href="#servicios" class="btn-hero">Ver novedades</a>
+                </div>
             </div>
+
             <!--Tercera imagen de hero-->
             <div class="carousel-slide">
                 <img src="img/hero3.jpeg" alt="imagen flores hero3">
+                <div class="slide-overlay">
+                    <span class="badge">Made with Love</span>
+                    <h1>Regala momentos <span class="highlight-yellow">que florecen</span></h1>
+                    <p>Encuentra el arreglo perfecto para celebrar, agradecer o hacer sonreír a alguien especial.</p>
+                    <a href="#servicios" class="btn-hero">Encuentra tu favorito</a>
+                </div>
             </div>
 
         </div>
 
+        <!-- Botones de Navegación del Carrusel -->
+            <button id="btn-prev" class="carousel-arrow prev" aria-label="Imagen anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="btn-next" class="carousel-arrow next" aria-label="Imagen siguiente">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Puntos Indicadores -->
+            <div class="carousel-dots" id="carousel-dots">
+                <button class="dot active" aria-label="Ir a diapositiva 1"></button>
+                <button class="dot" aria-label="Ir a diapositiva 2"></button>
+                <button class="dot" aria-label="Ir a diapositiva 3"></button>
+            </div>
     </section>
 
+        <!-- SECCIÓN DE SERVICIOS -->
+        <section id="servicios" class="servicios-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>NUESTRA COLECCIÓN</h2>
+                    <h3>Arreglos florales para cada ocasión.</h3>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon yellow"><i class="fa-solid fa-couch"></i></div>
+                        <h4>Ramos de flores</h4>
+                        <p>Ramos delicados y elegantes, diseñados para expresar tus sentimientos y sorprender a alguien especial.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon red"><i class="fa-solid fa-volume-high"></i></div>
+                        <h4>Arreglos para Regalo</h4>
+                        <p>Detalles florales únicos para cumpleaños, aniversarios y esos momentos que merecen celebrarse.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon yellow"><i class="fa-solid fa-microchip"></i></div>
+                        <h4>Diseños Personalizados</h4>
+                        <p>Creamos arreglos especiales con flores, colores y detalles que reflejan tu estilo y lo que quieres transmitir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN NOSOTROS -->
+        <section id="nosotros" class="nosotros-section">
+            <div class="container nosotros-inner">
+                <div class="nosotros-img">
+                    <img src="img/hero2.jpeg" alt="Arreglo floral elegante de Blossom Boutique">
+                </div>
+                <div class="nosotros-info">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <h3>Flores que convierten momentos en recuerdos.</h3>
+                    <p>En <strong>Blossom Boutique</strong>, creemos que las flores
+                tienen una forma única de expresar emociones. Por eso,
+                buscamos crear arreglos florales delicados, elegantes
+                y llenos de significado.</p>
+                    <p>Nuestra inspiración nace de los pequeños detalles y de
+                la ilusión de hacer especial cada ocasión, desde un regalo
+                espontáneo hasta una celebración inolvidable.</p>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <span class="stat-num yellow">100%</span>
+                            <span class="stat-lbl">Amor por los detalles.</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num red">ÚNICOS</span>
+                            <span class="stat-lbl">Diseños florales</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
-<p>This is a paragraph.</p>
+
 
     </main>
+
 
 <!--Aquí inicia el footer-->
 <footer>
